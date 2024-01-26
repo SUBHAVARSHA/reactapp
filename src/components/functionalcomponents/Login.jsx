@@ -1,45 +1,56 @@
-import React, { useReducer } from "react";
+import React, { useState } from 'react';
+import './styles.css';
+const LoginPage = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
-const value = { count: 0 };
-
-function countFunction(state, action) {
-  switch (action.type) {
-    case "sub":
-      console.log("Hello");
-      return { count: state.count - 1 };
-    case "add":
-      return { count: state.count + 1 };
-    case "reset":
-      return { count: value.count };
-    default:
-      return state;
-  }
-}
-
-const Login = () => {
-  const [countVal, updateCount] = useReducer(countFunction, value);
-
-  const handleSubtract = () => {
-    updateCount({ type: "sub" });
-  };
-
-  const handleAdd = () => {
-    updateCount({ type: "add" });
-  };
-
-  const handleReset = () => {
-    updateCount({ type: "reset" });
+  const useLogin= () => {
+   
+    if (username && password) {
+      setLoggedIn(true);
+    } else {
+      alert('Invalid credentials');
+    }
   };
 
   return (
     <div>
-      <h1>This is userReducer Example</h1>
-      <h2>Count: {countVal.count}</h2>
-      <button onClick={handleSubtract}>Subtract</button>
-      <button onClick={handleAdd}>Add</button>
-      <button onClick={handleReset}>Reset</button>
+      {isLoggedIn ? (
+        <div>
+          <h2>Welcome, {username}!</h2>
+          {/* Add logout button or redirect to another page */}
+        </div>
+      ) : (
+        <div>
+          <h2>Login</h2>
+          <form>
+            <label>
+              Username:
+              <input
+                type="text"
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+              />
+            </label>
+            <br />
+            <label>
+              Password:
+              <input
+                type="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </label>
+            <br />
+            <button type="button" onClick={useLogin}>
+              Login
+            </button>
+          </form>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Login;
+export default LoginPage;

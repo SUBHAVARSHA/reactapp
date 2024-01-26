@@ -8,9 +8,12 @@ import Experience from './components/functionalcomponents/Experience';
 import About from './components/functionalcomponents/About';
 import Login from './components/functionalcomponents/Login';
 import Home from './components/functionalcomponents/Home';
+import SignUp from './components/functionalcomponents/SignUp';
+
+
 function App() {
   return (
-    <div className="App">
+  <div className="App">
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -18,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} ></Route>
           <Route path="/experience" element={<Experience />} ></Route>
           <Route path="/login" element={<Login />} ></Route>
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
 
