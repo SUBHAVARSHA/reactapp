@@ -1,13 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
-import PropsComponent from './components/functionalcomponents/Propscomponent';
-import StateComponent from './components/classcomponents/StateComponent';
+//import PropsComponent from './components/functionalcomponents/Propscomponent';
+//import Statecomponent from './components/classcomponents/statecomponent';
+import NavBar from './components/functionalcomponents/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Experience from './components/functionalcomponents/Experience';
+import About from './components/functionalcomponents/About';
+import Login from './components/functionalcomponents/Login';
+import Home from './components/functionalcomponents/Home';
 function App() {
   return (
     <div className="App">
-      <PropsComponent name="Hello" course="ECE"></PropsComponent>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/about" element={<About />} ></Route>
+          <Route path="/experience" element={<Experience />} ></Route>
+          <Route path="/login" element={<Login />} ></Route>
+        </Routes>
+      </BrowserRouter>
+
+      {/*<PropsComponent name="Hello everyone" course="ECE"></PropsComponent>*/}
       <header className="App-header">
-      <StateComponent/>
+        {/*<Statecomponent/>*/}
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,6 +37,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <footer>
+      <p>&copy; 2024 All Rights Reserved By <span>authorized</span></p>
+</footer>
     </div>
   );
 }
