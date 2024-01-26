@@ -8,6 +8,8 @@ import Experience from './components/functionalcomponents/Experience';
 import About from './components/functionalcomponents/About';
 import Login from './components/functionalcomponents/Login';
 import Home from './components/functionalcomponents/Home';
+
+
 function App() {
   return (
     <div className="App">
@@ -39,6 +41,19 @@ function App() {
       </header>
       <footer>
       <p>&copy; 2024 All Rights Reserved By <span>authorized</span></p>
+      <div>
+        <p>Follow us on social media:</p>
+        <div className="social-links">
+          <a href="https://www.instagram.com/_.subhavarsha_yuvaraj.__?igsh=MWp6cDM0dmpxZjY3ZQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+            Instagram<br></br>
+          </a>
+          <a href="https://github.com/SUBHAVARSHA" target="_blank" rel="noopener noreferrer">
+            GitHub<br></br>
+          </a>
+          
+        </div>
+      </div>
+
 </footer>
     </div>
   );
