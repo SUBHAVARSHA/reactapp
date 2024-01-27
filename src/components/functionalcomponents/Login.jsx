@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles.css';
+
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -26,7 +26,9 @@ const LoginPage = () => {
           <h2>Login</h2>
           <form>
             <label>
+            <b>
               Username:
+              </b>
               <input
                 type="text"
                 value={username}
@@ -35,17 +37,20 @@ const LoginPage = () => {
             </label>
             <br />
             <label>
-              Password:
+              <b>
+              Password: 
+              </b>
               <input
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
-              />
+     
+             />
             </label>
             <br />
             <button type="button" onClick={useLogin}>
               Login
-            </button>
+            </button><br></br>
           </form>
         </div>
       )}

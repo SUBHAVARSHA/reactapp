@@ -4,7 +4,7 @@ const SignUp = () => {
       <div>
 
           <form>
-              {/* Email:<input type="email"></input><br></br><br></br> */}
+              
               <br></br><br></br>
               <label for="Username"><b>Username: </b></label>
               <input type="text" placeholder="Enter Username" name="Username" required></input><br></br><br></br>

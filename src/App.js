@@ -4,12 +4,12 @@ import './App.css';
 //import Statecomponent from './components/classcomponents/statecomponent';
 import NavBar from './components/functionalcomponents/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Experience from './components/functionalcomponents/Experience';
+import Education from './components/functionalcomponents/Education';
 import About from './components/functionalcomponents/About';
 import Login from './components/functionalcomponents/Login';
 import Home from './components/functionalcomponents/Home';
 import SignUp from './components/functionalcomponents/SignUp';
-
+import FeedbackForm from './components/functionalcomponents/FeedbackForm';
 
 function App() {
   return (
@@ -19,9 +19,14 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/about" element={<About />} ></Route>
-          <Route path="/experience" element={<Experience />} ></Route>
+          <Route path="/education" element={<Education />} ></Route>
           <Route path="/login" element={<Login />} ></Route>
           <Route path="/signup" element={<SignUp />} />
+
+
+  <Route path="/feedbackform" element={<FeedbackForm />} />
+
+
         </Routes>
       </BrowserRouter>
 
