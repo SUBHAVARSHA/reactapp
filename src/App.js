@@ -10,7 +10,8 @@ import Login from './components/functionalcomponents/Login';
 import Home from './components/functionalcomponents/Home';
 import SignUp from './components/functionalcomponents/SignUp';
 import FeedbackForm from './components/functionalcomponents/FeedbackForm';
-
+import Reference from './components/functionalcomponents/Reference';
+import Memo from './components/functionalcomponents/Memo';
 function App() {
   return (
   <div className="App">
@@ -22,6 +23,8 @@ function App() {
           <Route path="/education" element={<Education />} ></Route>
           <Route path="/login" element={<Login />} ></Route>
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/useRef" element={<Reference />} />
+          <Route path="/useMemo" element={<Memo />} />
 
 
   <Route path="/feedbackform" element={<FeedbackForm />} />
