@@ -12,6 +12,7 @@ import SignUp from './components/functionalcomponents/SignUp';
 import FeedbackForm from './components/functionalcomponents/FeedbackForm';
 import Reference from './components/functionalcomponents/Reference';
 import Memo from './components/functionalcomponents/Memo';
+import CallBack from './components/functionalcomponents/Callback';
 function App() {
   return (
   <div className="App">
@@ -25,7 +26,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/useRef" element={<Reference />} />
           <Route path="/useMemo" element={<Memo />} />
-
+          <Route path="/callBack" element={<callBack />} />
 
   <Route path="/feedbackform" element={<FeedbackForm />} />
 
