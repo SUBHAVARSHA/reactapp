@@ -6,12 +6,12 @@ const Callback = () => {
   const list1 = [...list, 60, 70, 100, 200, 300];
 
   const filteredList = list1.filter((value) => value <= 100);
-
+  const filteredList1 = list1.filter((value) => value > 100);
   const handlingCallbackFunc = useCallback(() => {
     console.log(
       `button clicked or not if clicked print the count else don't print the count Count: ${count}`
     );
-  }, [count]);
+  }, [count])
 
   return (
     <div>
@@ -25,6 +25,13 @@ const Callback = () => {
           <li key={index}>{val}</li>
         ))}
       </ol>
+      <h3>The values greater than 100.</h3>
+      <ul>
+
+        {filteredList1.map((val, index) => (
+          <li key={index}>{val}</li>
+        ))}
+      </ul>
     </div>
   );
 };
