@@ -9,10 +9,9 @@ import About from './components/functionalcomponents/About';
 import Login from './components/functionalcomponents/Login';
 import Home from './components/functionalcomponents/Home';
 import SignUp from './components/functionalcomponents/SignUp';
-import FeedbackForm from './components/functionalcomponents/FeedbackForm';
 import Reference from './components/functionalcomponents/Reference';
 import Memo from './components/functionalcomponents/Memo';
-import CallBack from './components/functionalcomponents/Callback';
+import Callback from './components/functionalcomponents/Callback';
 function App() {
   return (
   <div className="App">
@@ -26,9 +25,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/useRef" element={<Reference />} />
           <Route path="/useMemo" element={<Memo />} />
-          <Route path="/callBack" element={<callBack />} />
+          <Route path="/Callback" element={<Callback/>}></Route>
 
-  <Route path="/feedbackform" element={<FeedbackForm />} />
 
 
         </Routes>
